@@ -1,0 +1,51 @@
+﻿<Window x:Class="Donor21.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Donor21"
+        mc:Ignorable="d"
+        Title="Добавление в базу данных" Height="450" Width="450" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="2" Fill="#8A4442"></Rectangle>
+        <Rectangle Grid.Row="0" Fill="#8A4442"></Rectangle>
+        <TextBlock Grid.Row="0" Text="Добавление" Foreground="#d9d9d9" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Button Name="btnAdd" Click="btnAdd_Click" Grid.Row="2" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Background="#E2D9D9"></Button>
+        <Button Name="btnClose" Click="btnClose_Click" Grid.Row="2" Content="Выход" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0" Background="#E2D9D9"></Button>
+        <Image Grid.Row="2" Source="Resources\Logo.png" HorizontalAlignment="Center"></Image>
+        <Grid Grid.Row="1" Background="#E2D9D9">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Идентификационный номер донора" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
+            <TextBox Name="ID" Grid.Row="0" Grid.Column="1"></TextBox>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Компонент" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <TextBox Name="Component" Grid.Row="1" Grid.Column="1"></TextBox>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Статус" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <TextBox Name="Status" Grid.Row="2" Grid.Column="1"></TextBox>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Дата донации" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <DatePicker Name="Date_Fro" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></DatePicker>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Дата консервации" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <DatePicker Name="Date_Sbora" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></DatePicker>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Группа" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <TextBox Name="Group" Grid.Row="5" Grid.Column="1"></TextBox>
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Резус" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            <TextBox Name="Rh" Grid.Row="6" Grid.Column="1"></TextBox>
+        </Grid>
+    </Grid>
+</Window>
