@@ -22,12 +22,12 @@
         <DataGrid Grid.Row="1" Background="#E2D9D9" AutoGenerateColumns="False" IsReadOnly="True" Name="dtgFromBase">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID Донора" Binding="{Binding GUID_Donor}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Компонент" Binding="{Binding Component}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Компонент" Binding="{Binding ComponentActual}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Статус" Binding="{Binding FK_Status}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Дата донации" Binding="{Binding dateFiltered}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата донации" Binding="{Binding dateFiltered, StringFormat={}(DD:MM:YYYY)}" ></DataGridTextColumn>
                 <DataGridTextColumn Header="Дата консервации" Binding="{Binding dateFiltered2}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Группа" Binding="{Binding Group}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Резус-Фактор" Binding="{Binding Rh}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Резус-Фактор" Binding="{Binding RhActual}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="70,10,10,10">

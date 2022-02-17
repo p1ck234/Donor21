@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,7 +28,6 @@ namespace Donor21
         Edinica addEdinica = new Edinica();
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            
             MainWindow mainWindow = new MainWindow();
             this.Close();
             mainWindow.Show();
@@ -35,6 +35,7 @@ namespace Donor21
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            
             addEdinica.GUID_Donor = ID.ToString();
             addEdinica.Component = Component.ToString();
             //addEdinica.FK_Status = int.Parse(Status);
@@ -47,5 +48,7 @@ namespace Donor21
             MainWindow.bd.SaveChanges();
             this.Close();
         }
+
+        
     }
 }

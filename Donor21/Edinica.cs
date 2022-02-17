@@ -20,6 +20,19 @@ namespace Donor21
         [StringLength(6)]
         public string Component { get; set; }
 
+        public string ComponentActual
+        {
+            get
+            {
+                bool k = true;
+                if (Component == "Plazma")
+                    k = false;
+
+                return (k) ? "Кровь" : "Плазма";
+            }
+        }
+
+
         public int FK_Status { get; set; }
 
         [Column(TypeName = "date")]
@@ -33,6 +46,14 @@ namespace Donor21
         public string Group { get; set; }
 
         public bool Rh { get; set; }
+
+        public string RhActual 
+        {
+            get 
+            {
+                return (Rh) ? "Положительный" : "Отрицательный";
+            }
+        }
 
         public virtual Status Status { get; set; }
 
